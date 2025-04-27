@@ -6,6 +6,7 @@ import {
   updateUser,
   deleteUser,
   inactivateUser,
+  activateUser,
 } from "../controllers/user.controller";
 import { routeHandler } from "../middleware/routeHandler";
 import { authenticateJWT } from "../middleware/authHandler";
@@ -32,5 +33,10 @@ router
   .route("/inactivate/:id")
   // Protected
   .post(authenticateJWT, routeHandler(inactivateUser));
+
+router
+  .route("/activate/:id")
+  // Protected
+  .post(authenticateJWT, routeHandler(activateUser));
 
 export default router;
