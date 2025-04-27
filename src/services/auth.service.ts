@@ -1,9 +1,16 @@
-// src/services/auth.service.ts
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { User } from "../models/user.model";
 
 class AuthService {
+  /**
+   * Authenticates a user by verifying their credentials and generates a JWT token.
+   *
+   * @param username - The username of the user attempting to log in.
+   * @param password - The password of the user attempting to log in.
+   * @returns A promise that resolves to an object containing the JWT token and its expiration time in minutes.
+   * @throws An error if the credentials are invalid or the user is not active.
+   */
   async login(
     username: string,
     password: string
@@ -15,18 +22,18 @@ class AuthService {
 
     const user = await User.findOne({ username: username });
 
-    // 1) Check if user exists and is active
+    // Check if user exists and is active
     if (!user || user.status !== "ACTIVE") {
       throw new Error("Invalid credentials");
     }
 
-    // 2) Verify password
+    // Verify password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       throw new Error("Invalid credentials");
     }
 
-    // 3) Make JWT token
+    // Make JWT token
     const payload = {
       sub: user._id.toString(),
       user: {
