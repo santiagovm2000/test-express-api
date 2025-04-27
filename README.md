@@ -344,7 +344,9 @@ All routes use the prefix defined by `APP_PREFIX` (`/api/v1`).
 #### Get All Products
 
 - **Method:** `GET`  
-- **URL:** `/api/v1/products?productCode=PR012`
+- **Base URL:** `/api/v1/products`
+- **Example URL params:** `?productCode=PR012`
+- **Final URL:** `/api/v1/products?productCode=PR012`
 - **Protected (JWT):** `Yes`
 - **Response (Positive Status)**
   ```json
@@ -511,7 +513,9 @@ All routes use the prefix defined by `APP_PREFIX` (`/api/v1`).
 #### Get All Orders
 
 - **Method:** `GET`  
-- **URL:** `/api/v1/orders?with=user,products.product&limit=1`
+- **Base URL:** `/api/v1/orders`
+- **Example URL params:** `?with=user,products.product&limit=1`
+- **Final URL:** `/api/v1/orders?with=user,products.product&limit=1`
 - **Protected (JWT):** `Yes`
 - **Headers:** `Authorization: Bearer <token>`  
 - **Response (Positive Status)**
@@ -680,7 +684,9 @@ All routes use the prefix defined by `APP_PREFIX` (`/api/v1`).
 #### Get Orders by User
 
 - **Method:** `GET`  
-- **URL:** `/api/v1/orders/from/:userId?with=products.product&page=1&limit=1`
+- **Base URL:** `/api/v1/orders/from/:userId`
+- **Example URL params:** `?with=products.product&page=1&limit=1`
+- **Final URL:** `/api/v1/orders/from/:userId?with=products.product&page=1&limit=1`
 - **Protected (JWT):** `Yes`
 - **Headers:** `Authorization: Bearer <token>`  
 - **Response (Positive Status)**
