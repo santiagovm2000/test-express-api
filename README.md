@@ -24,10 +24,7 @@ Comprehensive RESTful API built with Node.js, Express, and MongoDB. Features JWT
 - **Node.js**: JavaScript runtime for building server-side applications.
 - **Express.js**: Web framework for creating RESTful APIs.
 - **MongoDB**: NoSQL database for storing application data.
-- **Mongoose**: ODM library for MongoDB.
 - **JWT (JSON Web Token)**: For secure authentication and authorization.
-- **dotenv**: For managing environment variables.
-- **bcrypt**: For hashing passwords.
 
 ## Environment Setup
 
