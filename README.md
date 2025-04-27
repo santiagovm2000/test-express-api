@@ -2,7 +2,7 @@
 
 Comprehensive RESTful API built with Node.js, Express, and MongoDB. Features JWT-based authentication, user management, product catalog, and order processing.
 
-> A Postman collection is provided in the `postman` folder at the project root for quick testing and exploration.
+> A [Postman collection](./postman) is provided in the `postman` folder at the project root for quick testing and exploration.
 
 ## Table of Contents
 - [Technologies Used](#technologies-used)
