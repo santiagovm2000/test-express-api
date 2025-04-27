@@ -1,6 +1,6 @@
 # API
 
-Comprehensive RESTful API built with Node.js, Express, and MongoDB. Features JWT-based authentication, user management, product catalog, and order processing for the Avila Tek platform.
+Comprehensive RESTful API built with Node.js, Express, and MongoDB. Features JWT-based authentication, user management, product catalog, and order processing.
 
 ## Table of Contents
 - [Technologies Used](#technologies-used)
